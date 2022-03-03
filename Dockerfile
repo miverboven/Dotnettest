@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/runtime-deps:5.0-alpine
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 COPY bin/ReleaseComplete/net5.0/linux-x64/publish/ App/
 WORKDIR /App
 ENTRYPOINT ["dotnet", "Dotnettest.dll"]
