@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "P6ie/nm40hmfFZ7h4iBzZg6avAU1FOkznPVATDs5lYqldCo1re8AbWn9dcmKVpNi3bUIIHntpIha08B7J7X6XA==",
+  "success": true,
+  "projectFilePath": "D:\\VS Projects\\Dotnettest\\Dotnettest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Verboven\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Verboven\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Verboven\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Verboven\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Verboven\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Verboven\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
