@@ -18,9 +18,9 @@ jobs:
     - name: Build for Windows
       run: dotnet publish -r win-x64 --configuration ReleaseComplete
     - name: Show contents of the current working directory
-      run: ls -la   
+      run: ls -lR   
     - name: Upload artifact - Windows
       uses: actions/upload-artifact@v1.0.0
       with:
         name: Dotnettest.exe
-        path: Dotnettest/bin/ReleaseComplete/net5.0/win-x64/publish/Dotnettest.exe
+        path: bin/ReleaseComplete/net5.0/win-x64/publish/Dotnettest.exe
