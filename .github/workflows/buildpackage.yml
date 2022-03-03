@@ -3,7 +3,7 @@ name: .NET Core
 on: [push]
 
 jobs:
-  build:
+  package:
 
     runs-on: ubuntu-latest
 
@@ -17,3 +17,9 @@ jobs:
       run: dotnet publish -r linux-musl-x64 -p:PublishSingleFile=true -c Release -o ./deploy
     - name: Show contents of the current working directory
       run: ls -lR   
+    - name: Docker login
+      run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
+    - name: Docker Build
+      run: docker build -t ${{ secrets.DOCKER_USER }}/dotnettest:latest .
+    - name: Upload container to Docker Hub with Push
+      run: docker push ${{ secrets.DOCKER_USER }}/dotnettest:latest
