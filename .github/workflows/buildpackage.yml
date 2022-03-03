@@ -3,7 +3,7 @@ name: .NET Core
 on: [push]
 
 jobs:
-  package:
+  build:
 
     runs-on: ubuntu-latest
 
@@ -14,9 +14,16 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Build for Linux
-      run: dotnet publish -r linux-musl-x64 -p:PublishSingleFile=true -c Release -o ./deploy
-    - name: Show contents of the current working directory
-      run: ls -lR   
+      run: dotnet publish -r linux-x64 --configuration ReleaseComplete
+    - name: Build for Windows
+      run: dotnet publish -r win-x64 --configuration ReleaseComplete
+
+    - name: Upload artifact - Windows
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: Dotnettest.exe
+        path: bin/ReleaseComplete/net5.0/win-x64/publish/Dotnettest.exe
+    
     - name: Docker login
       run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
     - name: Docker Build
