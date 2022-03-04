@@ -21,7 +21,7 @@ jobs:
     - name: Upload artifact - Windows
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: Dotnettest.exe
+        name: Dotnettest
         path: bin/Release/net5.0/win-x64/publish/Dotnettest.exe
     
     - name: Docker login
