@@ -22,7 +22,7 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         name: Dotnettest.exe
-        path: bin/ReleaseComplete/net5.0/win-x64/publish/Dotnettest.exe
+        path: bin/Release/net5.0/win-x64/publish/Dotnettest.exe
     
     - name: Docker login
       run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
